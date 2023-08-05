@@ -132,7 +132,6 @@ class example{
         if($name == 'prod'){
             switch(count($arg)){
                 case 3: return $arg[0]*$arg[1]*$arg[2];
-         
                 }
             }
     }
