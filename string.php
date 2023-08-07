@@ -14,7 +14,6 @@ echo($str);
 <hr>
 
 
-
 <pre>The chunk_split() function splits a string into a series of smaller parts.</pre>
     <pre>chunk_split(string,length,end)</pre>
 <?php
