@@ -53,11 +53,44 @@
             </td>
         </tr>
     </table>
-    <?php
-// define variables and set to empty values
 
-$name = $email = $gender = $comment = $website = "";
-$valid = true;?>
+
+
+    <table >
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Date of Birth</th>
+            <th>Course</th>
+            <th>Languages</th>
+        </tr>
+
+
+<tr>
+<td><?php echo $name;?></td>
+<td><?php echo $email; ?></td>
+<td><?php echo $password ;?></td>
+<td><?php echo $pnum ;?></td>
+<td><?php echo $address ;?></td>
+<td><?php echo $gender ;?></td>
+<td><?php echo $birthdate;?></td>
+<td><?php echo isset($_POST['course']) ? $_POST['course'] : ''; ?></td>
+<td>
+    <?php
+    if (isset($_POST['tamil'])) {
+        echo 'Tamil ';
+    }
+    if (isset($_POST['english'])) {
+        echo 'English';
+    }
+    ?>
+</td>
+</tr>
+
 </body>
 
 </html>
