@@ -8,7 +8,7 @@
 <body>
     <pre>The addcslashes() function returns a string with backslashes in front of the specified characters.</pre>
 <?php
-$str = addcslashes("Hello World!","o");
+$str = addcslashes("Hello World!","O");
 echo($str);
 ?>
 <hr>
@@ -27,7 +27,7 @@ echo chunk_split($str,1,".");
 <pre>The strtr() function translates certain characters in a string.</pre>
 <pre>strtr(string,from,to)</pre>
 <?php
-echo strtr(" Hilla Warld","ia","eo");
+echo strtr(" Hilla Warld","ial","eoi");
 ?>
 <hr>
 
@@ -73,7 +73,6 @@ $str = "Hello world. It's a beautiful day.";
 print_r (explode(" ",$str));
 ?>
 <hr>
-
 
 <pre>The str_word_count() function counts the number of words in a string.</pre>
 <?php
