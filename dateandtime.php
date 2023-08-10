@@ -87,14 +87,14 @@ date_date_set($date,2020,10,30);
 echo date_format($date,"Y/m/d");
 ?>
 <hr>
-<?php
 
-date_default_timezone_set("Asia/Kolkata"); 
+<?php
+date_default_timezone_set("Asia/Kolkata"); // Sets the default timezone used by all date/time functions
 $current_time = date("H:i:s"); 
 echo "Current India time: $current_time";
-
 ?>
+
 <?php
-echo date_default_timezone_get();
+echo date_default_timezone_get(); //Returns the default timezone used by all date/time functions
 ?>
 <pre> </pre>
