@@ -26,8 +26,9 @@ class Person {
     public $gender;
     public $address;
     public $mobileNumber;
-
-    public function __construct($name, $dob, $gender, $mobileNumber) {
+public $addrs=null;
+    public function __construct($name, $dob, $gender, $mobileNumber,$dno,$stn,$cy,$pc) {
+        $this->addrs=new address($dno,$stn,$cy,$pc);
         $this->name = $name;
         $this->dob = $dob;
         $this->gender = $gender;
@@ -43,35 +44,12 @@ class Person {
         echo"<br>";
         echo "mobileNumber:".$this->mobileNumber;
         echo"<br>";
+        $this->addrs->display();
     }
 }
 
-$obj=new address(18,'Mkpcolony','coimbatore',641006);
-$person=new person('harishmitha','17/01/2003','female',9994519917);
+
+$person=new person('harishmitha','17/01/2003','female',9994519917,18,'Mkpcolony','coimbatore',641006);
 $person->display1();
-$obj->display();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>

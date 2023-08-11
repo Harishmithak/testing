@@ -1,3 +1,12 @@
+<pre>  Write the program to create Employee class with employee code, employee name, department and basic pay as input data. Calculate bonus, incentive and gross pay.
+Input the member details using constructors. Include all the constructors and destructors in the class. Apart from constructors for getting the data, use proper functions to get inputs
+. Calculations are made with the following conditions.
+If department is Marketing or HR and basic pay is above 20000, bonus is 25% of basic pay, incentive is 15% of basic pay.
+If department is Marketing or HR and basic pay is above 10000, bonus is 15% of basic pay, incentive is 10% of basic pay.
+If department is Marketing or HR and basic pay is less than or equal to 10000 bonus is 1000 and no incentive.
+If department is Administration, fixed incentive is given which is 3000 for everyone in the team and no bonus is given. 
+Gross pay = basic pay + bonus + incentive.  Print all details in a neat format.</pre>
+
 <?php
 
 class employee{

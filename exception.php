@@ -21,7 +21,7 @@ function calculate($element) {
         throw new Exception("PrimeNumberException");
     }
 else{
-    echo "Element: $element, Square: " . ($element ** 2) . "\n";}
+    echo "Element: $element, Square: " . ($element ** 2);}
     echo"<br>";
 }
 $random_values = [];
@@ -34,10 +34,10 @@ foreach ($random_values as $value) {
         calculate($value);
     } catch (Exception $e) {
         if ($e->getMessage() === "PrimeNumberException") {
-            echo "Error: Prime number found: $value\n";
+            echo "Error: Prime number found: $value";
             echo"<br>";
         } else {
-            echo "Error: " .$value. $e->getMessage() . "\n";
+            echo "Error: " .$value. $e->getMessage() ;
             echo"<br>";
         }
     }

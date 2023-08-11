@@ -96,5 +96,6 @@ echo "Current India time: $current_time";
 
 <?php
 echo date_default_timezone_get(); //Returns the default timezone used by all date/time functions
+
 ?>
 <pre> </pre>

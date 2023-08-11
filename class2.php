@@ -38,7 +38,7 @@ $user1->setMailid("harish@gnail.com");
 $user2 = new User();
 $user2->setUsername("pooja");
 try {
-    $user2->setAge(16); 
+    $user2->setAge(20); 
 } catch (Exception $e) {
     echo "Exception: " . $e->getMessage();
     echo"<br>";

@@ -95,6 +95,7 @@ c_interest(200,40,12);
                 <input type="submit" name="ci" value="COMPOUND INTEREST "/>  
             </form>  
 
+
             <?php  
             function SIMPLE($P,$N,$R)    
             {  
@@ -106,6 +107,8 @@ c_interest(200,40,12);
                 $ci = $P * (pow(1 + ($R / 100), $N)) - $P;
                 echo "compound interest :".$ci;
             } 
+
+            
             if(isset($_POST['si']))  
             {  
                 SIMPLE($_POST['first'],$_POST['second'],$_POST['third']);  
@@ -118,6 +121,8 @@ c_interest(200,40,12);
             }  
          ?>  
          <hr>
+
+
          <?php 
 class example{
     
