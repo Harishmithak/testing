@@ -14,9 +14,9 @@ if ($conn->connect_error) {
 $productQuery = "SELECT * FROM Product";
 $productResult = $conn->query($productQuery);
 
-
 $userQuery = "SELECT * FROM User";
 $userResult = $conn->query($userQuery);
+
 ?>
 
 
@@ -122,7 +122,7 @@ $userResult = $conn->query($userQuery);
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // $ProductCode = $_POST["ProductCode"];
+
     $ProductName = $_POST["ProductName"];
     $ProductType = $_POST["ProductType"];
     $Description = $_POST["Description"];
@@ -130,11 +130,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Price= $_POST["Price"];
     $Image= $_POST["Image"];
 
+
    
     $insertQuery = "INSERT INTO Product (ProductName,ProductType,Description,Quantity ,Price,Image) 
                     VALUES ( '$ProductName', ' $ProductType','$Description ',' $Quantity ',' $Price','$Image')";
     if ($conn->query($insertQuery) === TRUE) {
-      
+
         exit();
     } else {
         echo "Error adding product: " . $conn->error;
