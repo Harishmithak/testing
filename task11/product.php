@@ -23,6 +23,7 @@ $userResult = $conn->query($userQuery);
 <html>
 <head>
     <title>Product and User Details</title>
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -61,12 +62,14 @@ $userResult = $conn->query($userQuery);
      }
 
     </style>
+
+
 </head>
 <body>
     <h2 id ='prod'>Product Details</h2>
     <h2>Add New Product</h2>
     <form method="post" action=" ">
-    <!-- <label>Product Code: <input type="text" name="ProductCode"></label><br> -->
+   
     <label>Product Name: <input type="text" name="ProductName"></label><br>
     <label>Product type: <input type="text" name="ProductType"></label><br>
     <label>Product description: <input type="text" name="Description"></label><br>
@@ -120,7 +123,7 @@ $userResult = $conn->query($userQuery);
 </body>
 </html>
 
-<?php
+ <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $ProductName = $_POST["ProductName"];
@@ -130,8 +133,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Price= $_POST["Price"];
     $Image= $_POST["Image"];
 
-
-   
     $insertQuery = "INSERT INTO Product (ProductName,ProductType,Description,Quantity ,Price,Image) 
                     VALUES ( '$ProductName', ' $ProductType','$Description ',' $Quantity ',' $Price','$Image')";
     if ($conn->query($insertQuery) === TRUE) {
@@ -141,6 +142,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Error adding product: " . $conn->error;
     }
 }
-?>
+?> 
 
 

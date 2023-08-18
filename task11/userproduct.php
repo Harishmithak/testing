@@ -23,7 +23,9 @@ $userResult = $conn->query($userQuery);
 <html>
 <head>
     <title>Product and User Details</title>
-    <style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -35,61 +37,35 @@ $userResult = $conn->query($userQuery);
             margin-top: 20px;
         }
 
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin-left:150px;
-            margin-top: 10px;
-            background-color: white;
-        }
-        
-        th, td {
-            padding: 8px;
-            text-align: left;
+        .card {
+            margin: 20px;
+            width: 18rem;
+            display: inline-block;
         }
 
-        th {
-            background-color: #333;
-            color: white;
+        img.card-img-top {
+            max-height: 200px;
+            object-fit: cover;
         }
-
-     #prod{
-        text-align:center;
-     }
-     #use{
-        text-align:center;
-     }
-
     </style>
 </head>
 <body>
-<h2 id ='prod'>Product Details</h2>
-    <table>
-        <tr>
-            <th>Product Code</th>
-            <th>Product Name</th>
-            <th>Product Type</th>
-            <th>Description</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Image</th>
-        </tr>
-        <?php while ($productRow = $productResult->fetch_assoc()): ?>
-            <tr>
-                <td><?= $productRow['ProductCode'] ?></td>
-                <td><?= $productRow['ProductName'] ?></td>
-                <td><?= $productRow['ProductType'] ?></td>
-                <td><?= $productRow['Description'] ?></td>
-                <td><?= $productRow['Quantity'] ?></td>
-                <td><?= $productRow['Price'] ?></td>
-                <td><img src="<?= $productRow['Image'] ?>" width="50" height="50" alt="Product Image"></td>
-            </tr>
-        <?php endwhile; ?>
-    </table>
-
-
+    <div class="container">
+        <h2>Product Details</h2>
+        <div class="row">
+            <?php while ($productRow = $productResult->fetch_assoc()): ?>
+                <div class="card">
+                    <img class="card-img-top"  src="<?= $productRow['Image'] ?>" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $productRow['ProductName'] ?></h5>
+                        <p class="card-text"><?= $productRow['Description'] ?></p>
+                        <p class="card-text">Price: <?= $productRow['Price'] ?></p>
+ 
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
 </body>
+
 </html>
-
-
-

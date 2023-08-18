@@ -12,14 +12,14 @@ echo date("l j F Y") ;
 <pre>date_create() returns the current date </pre>
 <?php
 $date=date_create();
-
+echo "current date: ".date('12/10/2023') ."<br>";
 echo date_format($date,"Y/m/d");
 ?>
 <hr>
 <pre> The date_format() function returns a date formatted according to the specified format.</pre>
 <?php
 $date=date_create("2013-03-15");
-echo date_format($date,"d/m/y");
+echo date_format($date,"d/m/Y");
 ?>
 
 <hr>
@@ -35,7 +35,7 @@ echo $diff->format("%a days");
 <pre>The date_modify() function modifies the timestamp.</pre>
 <?php
 $date=date_create("2013-05-01");
-date_modify($date,"-15 days");
+date_modify($date,"15 days");
 echo date_format($date,"Y-m-d");
 ?>
 <hr>
@@ -46,7 +46,7 @@ date_add(object, interval)
 
 <?php
 $date=date_create("2013-03-15");
-date_add($date,date_interval_create_from_date_string("40 days"));
+date_add($date,date_interval_create_from_date_string("40 years"));
 echo date_format($date,"Y-m-d");
 ?>
 
@@ -87,7 +87,10 @@ date_date_set($date,2020,10,30);
 echo date_format($date,"Y/m/d");
 ?>
 <hr>
+<?php
+echo date_default_timezone_get(); //Returns the default timezone used by all date/time functions
 
+?>
 <?php
 date_default_timezone_set("Asia/Kolkata"); // Sets the default timezone used by all date/time functions
 $current_time = date("H:i:s"); 

@@ -103,7 +103,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows > 0) {
   
-    
         if ($userType === "user") {
             header("Location: userproduct.php");
             exit();

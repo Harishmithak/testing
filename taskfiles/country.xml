@@ -1,0 +1,81 @@
+
+<countries>
+    <country>
+        <name>United States</name>
+        <capital>Washington, D.C.</capital>
+        <population>331002651</population>
+        <language>English</language>
+        <continent>North America</continent>
+        <boundary>
+            <east>Atlantic Ocean</east>
+            <west>Pacific Ocean</west>
+            <north>Canada</north>
+            <south>Mexico</south>
+        </boundary>
+    </country>
+    <country>
+        <name>India</name>
+        <capital>New Delhi</capital>
+        <population>1380004385</population>
+        <language>Hindi</language>
+        <continent>Asia</continent>
+        <boundary>
+            <east>Bay of Bengal</east>
+            <west>Pakistan</west>
+            <north>China</north>
+            <south>Indian Ocean</south>
+        </boundary>
+    </country>
+    <country>
+        <name>Sri Lanka</name>
+        <capital>Colombo</capital>
+        <population>21413249</population>
+        <language>Tamil</language>
+        <continent>Asia</continent>
+        <boundary>
+            <east>Bay of Bengal</east>
+            <west>India</west>
+            <north>None</north>
+            <south>Indian Ocean</south>
+        </boundary>
+    </country>
+    <country>
+        <name>China</name>
+        <capital>Beijing</capital>
+        <population>1439323776</population>
+        <language>Chinese</language>
+        <continent>Asia</continent>
+        <boundary>
+            <east>East China Sea</east>
+            <west>Tibet, Nepal</west>
+            <north>Russia, Mongolia</north>
+            <south>South China Sea</south>
+        </boundary>
+    </country>
+    <country>
+        <name>Brazil</name>
+        <capital>Brasília</capital>
+        <population>212559417</population>
+        <language>Portuguese</language>
+        <continent>South America</continent>
+        <boundary>
+            <east>Atlantic Ocean</east>
+            <west>Peru</west>
+            <north>Venezuela</north>
+            <south>Atlantic Ocean</south>
+        </boundary>
+    </country>
+    <country>
+        <name>Russia</name>
+        <capital>Moscow</capital>
+        <population>145934462</population>
+        <language>Russian</language>
+        <continent>Europe/Asia</continent>
+        <boundary>
+            <east>Pacific Ocean</east>
+            <west>Europe</west>
+            <north>Arctic Ocean</north>
+            <south>Kazakhstan, China</south>
+        </boundary>
+    </country>
+</countries>
